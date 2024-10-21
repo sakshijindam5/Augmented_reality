@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR.js Image Detection Example</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 300px;
+    }
+  </style>
+  <!-- A-Frame and AR.js scripts -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.3.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+
+  <!-- Display an Image in the Browser -->
+  <div>
+    <h3>Point your camera at this image:</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png" alt="Marker Image" id="markerImage">
+  </div>
+
+  <!-- AR.js Scene -->
+  <a-scene embedded arjs>
+    <!-- Using a custom pattern marker based on the image -->
+    <a-marker type="pattern" url="your-custom-marker.patt">
+      <!-- Text to show when the image is detected -->
+      <a-text value="You found the image!" position="0 0.5 0" scale="3 3 3" color="red"></a-text>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+
+</body>
+</html>
