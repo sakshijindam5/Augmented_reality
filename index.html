@@ -17,10 +17,14 @@
             id="scene"
             embedded
             gesture-detector
-        ><a-asset-item
-  id="animated-asset"
-  src="https://cdn.aframe.io/test-models/models/gltf/RobotExpressive/RobotExpressive.gltf"
-></a-asset-item>
+        >
+            <a-assets>
+                <a-asset-item
+                    id="animated-asset"
+                    src="asset.gltf"
+                ></a-asset-item>
+            </a-assets>
+
             <a-marker
                 id="animated-marker"
                 type="pattern"
