@@ -8,16 +8,32 @@
   <body>
     <a-scene embedded arjs>
       <a-assets>
-        <a-assets-item id="model" response-type="arraybuffer" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/base_basic_shaded.glb"></a-assets-item>
+        <video id="video" 
+          src="https://github.com/sakshijindam5/Augmented_reality/blob/main/assets/videoplayback-unscreen.mp4" 
+          loop="true" 
+          autoplay="true" 
+          webkit-playsinline 
+          playsinline 
+          muted>
+        </video>
       </a-assets>
+
       <a-marker type="pattern" url="assets/pattern-download.patt">
-        <a-entity gltf-model="#model" position="0 0 0" width="10" height="10" scale="0.05 0.05 0.05" rotation="0 0 0"></a-entity>
+        <!-- Video placed correctly on the marker -->
+        <a-video 
+          src="assets/videoplayback-unscreen.mp4" 
+          position="0 0 0"  <!-- Center of the marker -->
+          width="1"           
+          height="0.75"       
+          rotation="0 0 0"    
+          autoplay="true" 
+          loop="true" 
+          muted="true">
+        </a-video>
       </a-marker>
-     
-      <a-marker preset="hiro">
-        <a-box position="0 0 0" width="1" height="1" color="#FF3737"></a-box>
-      </a-marker>
+
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
+
