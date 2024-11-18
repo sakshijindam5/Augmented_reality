@@ -10,13 +10,19 @@
       <a-assets>
         <video id="video" src="https://github.com/sakshijindam5/Augmented_reality/blob/main/assets/mov_bbb.mp4" loop="true" autoplay="true" webkit-playsinline playsinline muted></video>
       </a-assets>
+      
+      <!-- First marker with video positioned above -->
       <a-marker type="pattern" url="assets/pattern-download.patt">
-        <a-video src="assets/mov_bbb.mp4" position="0 0 0" width="3" height="2" scale="1 1 1" rotation="0 0 0" autoplay="true" loop="true" muted="true"></a-video>
+        <a-video src="assets/mov_bbb.mp4" position="0 1 0" width="3" height="2" scale="1 1 1" rotation="0 0 0" autoplay="true" loop="true" muted="true"></a-video>
       </a-marker>
+      
+      <!-- Hiro marker with video positioned above -->
       <a-marker preset="hiro">
-        <a-video src="assets/mov_bbb.mp4" position="0 0 0" width="3" height="2" scale="1 1 1" rotation="0 0 0" autoplay="true" loop="true" muted="true"></a-video>
+        <a-video src="assets/mov_bbb.mp4" position="0 1 0" width="3" height="2" scale="1 1 1" rotation="0 0 0" autoplay="true" loop="true" muted="true"></a-video>
       </a-marker>
+
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
+
