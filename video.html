@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Simple Web AR Example</title>
-    <!-- Include A-Frame Library -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Video Example</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <!-- Include AR.js for augmented reality support -->
-    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body style="margin: 0; overflow: hidden;">
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+
     <a-scene embedded arjs>
-      <!-- Define the Assets -->
-      <a-assets>
-        <!-- Add your video here -->
-        <video id="myVideo" src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay loop="true" muted="true" crossorigin="anonymous"></video>
-      </a-assets>
 
-      <!-- Define the Marker -->
-      <a-marker type="pattern" url="assets/pattern-download.patt">
-        <!-- Place the video on the marker -->
-        <a-video src="#myVideo" position="0 0 0" width="2" height="1.5" autoplay loop="true" muted="true"></a-video>
-      </a-marker>
+        <!-- Define the marker that will trigger the video -->
+        <a-marker preset="hiro">
+            <!-- Video element that will play when the marker is detected -->
+            <a-video src="url(https://www.w3schools.com/html/mov_bbb.mp4)" width="4" height="2.25" position="0 0 0"></a-video>
+        </a-marker>
 
-      <!-- Add a Camera to view the scene -->
-      <a-entity camera></a-entity>
+        <!-- Camera setup -->
+        <a-entity camera></a-entity>
+
     </a-scene>
-  </body>
+
+    <footer style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: white;">
+        <p>Download the video: <a href="https://www.w3schools.com/html/mov_bbb.mp4" download>Download Video</a></p>
+    </footer>
+
+</body>
 </html>
