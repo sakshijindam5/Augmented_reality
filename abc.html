@@ -21,6 +21,7 @@
 </head>
 <body>
   <div id="ar-container">
+    <!-- A-Frame Scene -->
     <a-scene
       mindar-image="imageTargetSrc: assets/targets.mind; autoStart: true;"
       embedded
@@ -29,15 +30,16 @@
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: true"
     >
+      <!-- Assets Section -->
       <a-assets>
         <!-- Add your 3D model -->
         <a-asset-item id="3dmodel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/doraemon_fan_art.glb"></a-asset-item>
       </a-assets>
 
       <!-- AR Camera -->
-      <a-camera></a-camera>
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <!-- Tracked 3D Object -->
+      <!-- Tracked 3D Object: Appears when the target image is detected -->
       <a-entity
         mindar-image-target
         targetIndex="0"
