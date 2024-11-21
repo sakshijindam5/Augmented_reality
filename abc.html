@@ -4,24 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Tracking Web AR</title>
+  <!-- MindAR and A-Frame Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1/dist/mindar-image-aframe.prod.js"></script>
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
   <!-- AR Scene -->
-  <a-scene mindar-image embedded color-space="sRGB" vr-mode-ui="false">
-    <!-- MindAR Image Tracker -->
+  <a-scene 
+    mindar-image 
+    embedded 
+    color-space="sRGB" 
+    vr-mode-ui="false" 
+    device-orientation-permission-ui="enabled: true;">
+    
+    <!-- Load Assets -->
     <a-assets>
+      <!-- MindAR Target File -->
       <a-asset-item id="target" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/images.mind"></a-asset-item>
     </a-assets>
-    
-    <!-- AR Camera -->
+
+    <!-- Camera -->
     <a-camera position="0 0 0" look-controls></a-camera>
 
-    <!-- Image Anchor -->
+    <!-- Image Target Tracking -->
     <a-entity mindar-image-target="targetIndex: 0">
-      <!-- 3D Content -->
+      <!-- 3D Box -->
       <a-box position="0 0.5 0" material="color: green;"></a-box>
+      <!-- Text -->
       <a-text value="Hello, AR!" position="0 1 0" align="center" color="red"></a-text>
     </a-entity>
   </a-scene>
