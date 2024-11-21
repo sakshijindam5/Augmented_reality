@@ -6,17 +6,22 @@
   </head>
   <body>
     <a-scene mindar-image="imageTargetSrc: https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/images.mind;" >
+      
       <a-assets>
         <!--<img id="card" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/card.png" />-->
         <a-asset-item id="avatarModel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/instagram_3d-icon.glb"></a-asset-item>
       </a-assets>
 
 
-      <a-entity mindar-image-target="targetIndex: 0">
-        <!--<a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>-->
-        <a-gltf-model rotation="0 0 0" position="0 0 0.1"  scale="0.15 0.15 0.15" src="#avatarModel">
-      </a-entity>
+<a-entity mindar-image-target="targetIndex: 0">
+      <!-- 3D Box -->
+      <a-box position="0 0.5 0" material="color: green;"></a-box>
+      <!-- Text -->
+      <a-text value="Hello, AR!" position="0 1 0" align="center" color="red"></a-text>
+    </a-entity>
+      
      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      
     </a-scene>
   </body>
 </html>
