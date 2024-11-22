@@ -1,39 +1,60 @@
-<!DOCTYPE html>
+Share
+
+
+You said:
+<!doctype html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Card AR</title>
-  <script src="https://cdn.jsdelivr.net/npm/aframe@1.2.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.1/dist/mindar-aframe.min.js"></script>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-  </style>
+  <meta charset="utf-8">
+
+  <title>The AR Business Card</title>
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+ <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>-->
+
+ <!-- <script>
+    AFRAME.registerComponent('navigate-on-click', {
+      schema: {
+        url: {default: ''}
+      },
+      init: function () {
+        var data = this.data;
+        var el = this.el;
+        el.addEventListener('click', function () {
+          window.open(data.url, '_blank');
+        });
+      }
+    });
+  </script>-->
 </head>
-<body>
-  <a-scene mindar="imageTracking: true;" embedded>
-    <!-- MindAR Image Tracker -->
+
+<body style='margin: 0px; overflow: hidden;'>
+  <a-scene embedded arjs='trackingMethod: best;'>
     <a-assets>
-      <!-- Add the marker image -->
-      <img id="card-marker" src="https://github.com/sakshijindam5/Augmented_reality/blob/main/Card/img/assets/nyancat.jpg" />
-      <!-- Social Media Icon Models -->
-      <a-asset-item id="facebook-icon" src="img/assets/instagram_3d-icon.glb"></a-asset-item>
-      <a-asset-item id="twitter-icon" src="img/assets/instagram_3d-icon.glb"></a-asset-item>
+      <img id="github_icon" src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_github-512.png">
+      <img id="insta_icon" src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_instagram-512.png">
+      <img id="linkedin_icon" src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_likedin-512.png">
+      <img id="facebook_icon" src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_facebook-512.png">
     </a-assets>
 
-    <!-- Define the marker -->
-    <a-entity mindar-image-target="targetIndex: 0">
-      <!-- Add 3D Models (Social Media Icons) -->
-      <a-gltf-model src="#facebook-icon" position="0 0 0" scale="0.1 0.1 0.1"></a-gltf-model>
-      <a-gltf-model src="#twitter-icon" position="0.2 0 0" scale="0.1 0.1 0.1"></a-gltf-model>
-    </a-entity>
+    <a-plane  color="#3199f9" opacity="0.95" navigate-on-click="url: https://www.linkedin.com/in/utkarshgpta/">
+      <a-image src="https://s.gravatar.com/avatar/78156753f9d8feaebe2418780bdc262b?s=250"></a-image>
+      <a-text align="center" value="Hello, World!\nThis is a business card.\nMade by Utkarsh\nSociete Generale GSC\nFind below the links to various platforms.\P.S.Exhibits random behaviour when opening links." color="black" width="1" z-offset="0.1"></a-text>
+    </a-plane>
 
-    <!-- Camera -->
-    <a-camera position="0 0 0"></a-camera>
+    <a-plane position="0 0 0.8" color="transparent" opacity="0" width="2" height="0.3" >
+      <a-box src="#github_icon" position="-0.4 0 0" depth="0.15" height="0.15" width="0.15" navigate-on-click="url: http://github.com"></a-box>
+      <a-box src="#insta_icon" position="0 0 0" depth="0.15" height="0.15" width="0.15" navigate-on-click="url: http://instagram.com"></a-box>
+      <a-box src="#linkedin_icon" position="0.4 0 0" depth="0.15" height="0.15" width="0.15" navigate-on-click="url: https://www.linkedin.com"></a-box>
+      <a-box src="#facebook_icon" position="0.8 0 0" depth="0.15" height="0.15" width="0.15" navigate-on-click="url: http://facebook.com"></a-box>
+    </a-plane>
+
+    <a-plane position="1.2 0 0" width="1" height="1" rotation="-90 0 0" opacity="1">
+      <a-image src="img/assets/card.png"></a-image>
+    </a-plane>
+
+    <a-entity id="camera" cursor="rayOrigin: mouse"></a-entity>
+    <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 </body>
 </html>
