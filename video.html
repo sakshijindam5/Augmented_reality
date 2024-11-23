@@ -1,30 +1,37 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Video Example</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
-</head>
-<body style="margin: 0; overflow: hidden;">
-
+<html>
+  <head>
+    <title>My AR App</title>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
     <a-scene embedded arjs>
+      <a-assets>
+        <video id="video" src="https://github.com/sakshijindam5/Augmented_reality/blob/main/assets/videoplayback-unscreen.mp4" loop="true" autoplay="true" webkit-playsinline playsinline muted></video>
+      </a-assets>
+      
+      
+  <a-marker type="pattern" url="assets/pattern-download.patt">
+  <a-video 
+    src="assets/videoplayback-unscreen.mp4" 
+    position="0 0 0"   
+    width="1"          
+    height="0.75"      
+    rotation="0 180 0"    
+    autoplay="true" 
+    loop="true" 
+    muted="true">
+  </a-video>
+</a-marker>
 
-        <!-- Define the marker that will trigger the video -->
-        <a-marker preset="hiro">
-            <!-- Video element that will play when the marker is detected -->
-            <a-video src="url(https://www.w3schools.com/html/mov_bbb.mp4)" width="4" height="2.25" position="0 0 0"></a-video>
+
+           <a-marker preset="hiro">
+            <a-video src="assets/videoplayback-unscreen.mp4" width="4" height="2.25" position="0 0 0" autoplay="true" loop="true" muted="true"></a-video>
         </a-marker>
 
-        <!-- Camera setup -->
-        <a-entity camera></a-entity>
-
+      <a-entity camera></a-entity>
     </a-scene>
-
-    <footer style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: white;">
-        <p>Download the video: <a href="https://www.w3schools.com/html/mov_bbb.mp4" download>Download Video</a></p>
-    </footer>
-
-</body>
+  </body>
 </html>
