@@ -1,0 +1,996 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "THREE.GLTFExporter"
+  },
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "scene": 0,
+  "nodes": [
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        0.01,
+        0,
+        0,
+        0,
+        0,
+        0.01,
+        0,
+        0,
+        0,
+        0,
+        0.01,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "matrix": [
+        0.9562390624751373,
+        0.29258649216371957,
+        0,
+        0,
+        -0.29258649216371957,
+        0.9562390624751373,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -500.4697781444572,
+        99,
+        142,
+        1
+      ],
+      "name": "Cute Character Running.png",
+      "mesh": 0
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        282.2634578099305,
+        33.93433736653145,
+        -318,
+        1
+      ],
+      "name": "Male Cute Character Walking (4).png",
+      "mesh": 1
+    },
+    {
+      "matrix": [
+        0.978075716612112,
+        0.20824959201329418,
+        0,
+        0,
+        -0.20824959201329418,
+        0.978075716612112,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        589,
+        25.99999999999997,
+        -465,
+        1
+      ],
+      "name": "Male Cute Character Walking (3).png",
+      "mesh": 2
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -256,
+        54.99999999999994,
+        100,
+        1
+      ],
+      "name": "Male Cute Character Walking (1).png",
+      "mesh": 3
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        66.07013044123369,
+        12,
+        -100,
+        1
+      ],
+      "name": "Male Cute Character Walking.png",
+      "mesh": 4
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -6.123233995736766e-17,
+        0,
+        0,
+        6.123233995736766e-17,
+        1,
+        0,
+        0,
+        6.12323399573677e-14,
+        1000,
+        1
+      ],
+      "camera": 0
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "name": "Default Ambient Light"
+    },
+    {
+      "name": "Scene 1",
+      "children": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 96,
+      "byteLength": 32,
+      "target": 34962,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 128,
+      "byteLength": 24,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 152,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 200,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 248,
+      "byteLength": 32,
+      "target": 34962,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 280,
+      "byteLength": 24,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 304,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 352,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 400,
+      "byteLength": 32,
+      "target": 34962,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 432,
+      "byteLength": 24,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 456,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 504,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 552,
+      "byteLength": 32,
+      "target": 34962,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 584,
+      "byteLength": 24,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 608,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 656,
+      "byteLength": 48,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 704,
+      "byteLength": 32,
+      "target": 34962,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 736,
+      "byteLength": 24,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 760,
+      "uri": "data:application/octet-stream;base64,AADIwwAAyEMAAAAAAADIQwAAyMMAAAAAAADIQwAAyEMAAAAAAADIwwAAyMMAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAQAAAAIAAAABAAAAAAAAAAMAAACJkLPD4gbKQwAAAACJkLND4gbKwwAAAACJkLND4gbKQwAAAACJkLPD4gbKwwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAABAAAAAgAAAAEAAAAAAAAAAwAAAAAAyMMAAMhDAAAAAAAAyEMAAMjDAAAAAAAAyEMAAMhDAAAAAAAAyMMAAMjDAAAAAAAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAEAAAACAAAAAQAAAAAAAAADAAAAAADIwwAAyEMAAAAAAADIQwAAyMMAAAAAAADIQwAAyEMAAAAAAADIwwAAyMMAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAQAAAAIAAAABAAAAAAAAAAMAAAAG98LDAADIQwAAAAAG98JDAADIwwAAAAAG98JDAADIQwAAAAAG98LDAADIwwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAABAAAAAgAAAAEAAAAAAAAAAwAAAA=="
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        400,
+        400,
+        0
+      ],
+      "min": [
+        -400,
+        -400,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0,
+        0,
+        1
+      ],
+      "min": [
+        0,
+        0,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 6,
+      "max": [
+        3
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        359.1291809082031,
+        404.05377197265625,
+        0
+      ],
+      "min": [
+        -359.1291809082031,
+        -404.05377197265625,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0,
+        0,
+        1
+      ],
+      "min": [
+        0,
+        0,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5125,
+      "count": 6,
+      "max": [
+        3
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        400,
+        400,
+        0
+      ],
+      "min": [
+        -400,
+        -400,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0,
+        0,
+        1
+      ],
+      "min": [
+        0,
+        0,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5125,
+      "count": 6,
+      "max": [
+        3
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        400,
+        400,
+        0
+      ],
+      "min": [
+        -400,
+        -400,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0,
+        0,
+        1
+      ],
+      "min": [
+        0,
+        0,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 14,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 15,
+      "componentType": 5125,
+      "count": 6,
+      "max": [
+        3
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 16,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        389.92987060546875,
+        400,
+        0
+      ],
+      "min": [
+        -389.92987060546875,
+        -400,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 17,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0,
+        0,
+        1
+      ],
+      "min": [
+        0,
+        0,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 18,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 19,
+      "componentType": 5125,
+      "count": 6,
+      "max": [
+        3
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "extras": {
+            "shape": {
+              "points": [
+                -400,
+                400,
+                -400,
+                400,
+                -400,
+                400,
+                0,
+                400,
+                400,
+                400,
+                400,
+                400,
+                400,
+                0,
+                400,
+                -400,
+                400,
+                -400,
+                400,
+                -400,
+                0,
+                -400,
+                -400,
+                -400,
+                -400,
+                -400,
+                -400,
+                0
+              ],
+              "shapeHoles": [],
+              "isClosed": true,
+              "roundness": 0
+            },
+            "parameters": {
+              "width": 800,
+              "depth": 0,
+              "cornerRadius": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "cornerType": 0,
+              "extrudeBevelSize": 0,
+              "extrudeBevelSegments": 1,
+              "height": 800,
+              "type": "RectangleGeometry"
+            },
+            "ui": {
+              "enabledIndieCorners": false
+            },
+            "type": "RectangleGeometry"
+          },
+          "indices": 3
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "extras": {
+            "shape": {
+              "points": [
+                -359.12917144878435,
+                404.05377921829586,
+                -359.12917144878435,
+                404.05377921829586,
+                -359.12917144878435,
+                404.05377921829586,
+                0,
+                359.12917144878435,
+                404.05377921829586,
+                359.12917144878435,
+                404.05377921829586,
+                359.12917144878435,
+                404.05377921829586,
+                0,
+                359.12917144878435,
+                -404.05377921829586,
+                359.12917144878435,
+                -404.05377921829586,
+                359.12917144878435,
+                -404.05377921829586,
+                0,
+                -359.12917144878435,
+                -404.05377921829586,
+                -359.12917144878435,
+                -404.05377921829586,
+                -359.12917144878435,
+                -404.05377921829586,
+                0
+              ],
+              "shapeHoles": [],
+              "isClosed": true,
+              "roundness": 0
+            },
+            "parameters": {
+              "width": 718.2583428975687,
+              "depth": 0,
+              "cornerRadius": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "cornerType": 0,
+              "extrudeBevelSize": 0,
+              "extrudeBevelSegments": 1,
+              "height": 808.1075584365917,
+              "type": "RectangleGeometry"
+            },
+            "ui": {
+              "enabledIndieCorners": false
+            },
+            "type": "RectangleGeometry"
+          },
+          "indices": 7
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "attributes": {
+            "POSITION": 8,
+            "NORMAL": 9,
+            "TEXCOORD_0": 10
+          },
+          "extras": {
+            "shape": {
+              "points": [
+                -400,
+                400,
+                -400,
+                400,
+                -400,
+                400,
+                0,
+                400,
+                400,
+                400,
+                400,
+                400,
+                400,
+                0,
+                400,
+                -400,
+                400,
+                -400,
+                400,
+                -400,
+                0,
+                -400,
+                -400,
+                -400,
+                -400,
+                -400,
+                -400,
+                0
+              ],
+              "shapeHoles": [],
+              "isClosed": true,
+              "roundness": 0
+            },
+            "parameters": {
+              "width": 800,
+              "depth": 0,
+              "cornerRadius": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "cornerType": 0,
+              "extrudeBevelSize": 0,
+              "extrudeBevelSegments": 1,
+              "height": 800,
+              "type": "RectangleGeometry"
+            },
+            "ui": {
+              "enabledIndieCorners": false
+            },
+            "type": "RectangleGeometry"
+          },
+          "indices": 11
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "attributes": {
+            "POSITION": 12,
+            "NORMAL": 13,
+            "TEXCOORD_0": 14
+          },
+          "extras": {
+            "shape": {
+              "points": [
+                -400,
+                400,
+                -400,
+                400,
+                -400,
+                400,
+                0,
+                400,
+                400,
+                400,
+                400,
+                400,
+                400,
+                0,
+                400,
+                -400,
+                400,
+                -400,
+                400,
+                -400,
+                0,
+                -400,
+                -400,
+                -400,
+                -400,
+                -400,
+                -400,
+                0
+              ],
+              "shapeHoles": [],
+              "isClosed": true,
+              "roundness": 0
+            },
+            "parameters": {
+              "width": 800,
+              "depth": 0,
+              "cornerRadius": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "cornerType": 0,
+              "extrudeBevelSize": 0,
+              "extrudeBevelSegments": 1,
+              "height": 800,
+              "type": "RectangleGeometry"
+            },
+            "ui": {
+              "enabledIndieCorners": false
+            },
+            "type": "RectangleGeometry"
+          },
+          "indices": 15
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "attributes": {
+            "POSITION": 16,
+            "NORMAL": 17,
+            "TEXCOORD_0": 18
+          },
+          "extras": {
+            "shape": {
+              "points": [
+                -389.9298695587663,
+                400,
+                -389.9298695587663,
+                400,
+                -389.9298695587663,
+                400,
+                0,
+                389.9298695587663,
+                400,
+                389.9298695587663,
+                400,
+                389.9298695587663,
+                400,
+                0,
+                389.9298695587663,
+                -400,
+                389.9298695587663,
+                -400,
+                389.9298695587663,
+                -400,
+                0,
+                -389.9298695587663,
+                -400,
+                -389.9298695587663,
+                -400,
+                -389.9298695587663,
+                -400,
+                0
+              ],
+              "shapeHoles": [],
+              "isClosed": true,
+              "roundness": 0
+            },
+            "parameters": {
+              "width": 779.8597391175326,
+              "depth": 0,
+              "cornerRadius": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "cornerType": 0,
+              "extrudeBevelSize": 0,
+              "extrudeBevelSegments": 1,
+              "height": 800,
+              "type": "RectangleGeometry"
+            },
+            "ui": {
+              "enabledIndieCorners": false
+            },
+            "type": "RectangleGeometry"
+          },
+          "indices": 19
+        }
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "type": "orthographic",
+      "orthographic": {
+        "xmag": 19.33465044716869,
+        "ymag": 9.188994027625746,
+        "zfar": 100000,
+        "znear": 0
+      }
+    }
+  ]
+}
