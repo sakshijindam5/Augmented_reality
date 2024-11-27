@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <title>Web AR Pointer</title>
+  <style>
+    .clickable:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <a-scene
+    mindar-image="imageTargetSrc: https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSSCard.mind"
+    color-space="sRGB"
+    renderer="colorManagement: true, physicallyCorrectLights"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
+
+    <a-assets>
+      <img id="card" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSSCard.png" />
+      <img id="whatsapp" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/whatsapp.png" />
+    </a-assets>
+
+    <a-camera position="0 0 0" look-controls="enabled: false">
+      <!-- Add a cursor for pointer interaction -->
+      <a-cursor
+        color="red"
+        raycaster="objects: .clickable"
+        fuse="true"
+        fuse-timeout="1000">
+      </a-cursor>
+    </a-camera>
+
+    <a-entity mindar-image-target="targetIndex: 0">
+      <!-- Background -->
+      <a-plane src="#card" position="0 0 0" height="0.552" width="1"></a-plane>
+
+      <!-- Social Media Icon -->
+      <a-plane
+        class="clickable"
+        src="#whatsapp"
+        position="0 -0.2 0"
+        height="0.1"
+        width="0.1"
+        id="whatsappIcon">
+      </a-plane>
+    </a-entity>
+  </a-scene>
+
+  <script>
+    // Event listener for the clickable element
+    const whatsappIcon = document.getElementById('whatsappIcon');
+    whatsappIcon.addEventListener('click', () => {
+      window.open('https://whatsapp.com', '_blank');
+    });
+  </script>
+</body>
+</html>
