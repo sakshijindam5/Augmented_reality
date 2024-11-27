@@ -15,6 +15,7 @@
       <a-assets>
         <img id="card" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSSCard.png" />
         <a-asset-item id="avatarModel1" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSS3D.glb"></a-asset-item>
+        <a-asset-item id="Model1" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/cool.glb"></a-asset-item>
         <!--<img id="FemaleModel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/FemaleModel.png" />-->
         <img id="whatsapp" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/whatsapp.png" />
         <img id="twitter" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/twitter.png" />
@@ -35,7 +36,13 @@
           src="#avatarModel1"
           animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
         ></a-gltf-model>
-        
+        <a-gltf-model
+          rotation="0 0 0"
+          position="0 0 0.1"
+          scale="0.05 0.05 0.05"
+          src="#Model1"
+          animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
+        ></a-gltf-model>
 
         <!--<a-plane src="#FemaleModel" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>-->
         <a-plane src="#whatsapp" position="-0.4 -0.4 0" height="0.1" width="0.1" href="https://whatsapp.com" class="clickable"></a-plane>
