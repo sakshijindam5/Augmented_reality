@@ -1,120 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-  <title>AR Social Media Links</title>
-</head>
-<body>
-  <a-scene
-    mindar-image="imageTargetSrc: https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSSCard.mind"
-    color-space="sRGB"
-    renderer="colorManagement: true, physicallyCorrectLights"
-    vr-mode-ui="enabled: false"
-    device-orientation-permission-ui="enabled: false">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene
+      mindar-image="imageTargetSrc:https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSSCard.mind"
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false">
+      
+      <a-assets>
+        
+        <img id="card" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSSCard.png" />
+        
+        <a-asset-item id="avatarModel1" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSS3D.glb"></a-asset-item>
+        <!--<a-asset-item id="Model1" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/cool.glb"></a-asset-item>-->
+        
+        <img id="whatsapp" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/whatsapp.png" />
+        <img id="twitter" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/twitter.png" />
+        <img id="linkedin" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/linkedin.png" />
+        <img id="instagram" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/instagram.png" />
+        <img id="facebook" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/facebook.png" />
+        
+      </a-assets>
 
-    <a-assets>
-      <img id="card" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSSCard.png" />
-      <a-asset-item id="avatarModel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSS3D.glb"></a-asset-item>
-      <!--<a-asset-item id="coolModel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/cool.glb"></a-asset-item>-->
-      <img id="whatsapp" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/whatsapp.png" />
-      <img id="twitter" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/twitter.png" />
-      <img id="linkedin" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/linkedin.png" />
-      <img id="instagram" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/instagram.png" />
-      <img id="facebook" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/facebook.png" />
-    </a-assets>
-
-    <a-camera position="0 0 0" look-controls="enabled: false">
-      <a-cursor></a-cursor>
-    </a-camera>
-
-    <a-entity mindar-image-target="targetIndex: 0">
-      <!-- Card Background -->
-      <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-
-      <!-- 3D Models -->
-      <a-gltf-model
-        rotation="0 0 0"
-        position="0 0 0.1"
-        scale="0.05 0.05 0.05"
-        src="#avatarModel"
-        animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
-      </a-gltf-model>
-
-      <!--<a-gltf-model
-        rotation="0 0 0"
-        position="-0.4 -0.2 0"
-        scale="0.15 0.15 0.15"
-        src="#coolModel">
-      </a-gltf-model>-->
-
-      <!-- Social Media Icons -->
-      <a-plane
-        src="#whatsapp"
-        position="-0.4 -0.4 0"
-        height="0.1"
-        width="0.1"
-        class="clickable"
-        id="whatsappLink">
-      </a-plane>
-      <a-plane
-        src="#twitter"
-        position="-0.2 -0.4 0"
-        height="0.1"
-        width="0.1"
-        class="clickable"
-        id="twitterLink">
-      </a-plane>
-      <a-plane
-        src="#linkedin"
-        position="0 -0.4 0"
-        height="0.1"
-        width="0.1"
-        class="clickable"
-        id="linkedinLink">
-      </a-plane>
-      <a-plane
-        src="#instagram"
-        position="0.2 -0.4 0"
-        height="0.1"
-        width="0.1"
-        class="clickable"
-        id="instagramLink">
-      </a-plane>
-      <a-plane
-        src="#facebook"
-        position="0.4 -0.4 0"
-        height="0.1"
-        width="0.1"
-        class="clickable"
-        id="facebookLink">
-      </a-plane>
-    </a-entity>
-  </a-scene>
-
-  <script>
-    // Add event listeners for the social media icons
-    document.getElementById('whatsappLink').addEventListener('click', () => {
-      window.open('https://whatsapp.com', '_blank');
-    });
-
-    document.getElementById('twitterLink').addEventListener('click', () => {
-      window.open('https://twitter.com', '_blank');
-    });
-
-    document.getElementById('linkedinLink').addEventListener('click', () => {
-      window.open('https://linkedin.com', '_blank');
-    });
-
-    document.getElementById('instagramLink').addEventListener('click', () => {
-      window.open('https://instagram.com', '_blank');
-    });
-
-    document.getElementById('facebookLink').addEventListener('click', () => {
-      window.open('https://facebook.com', '_blank');
-    });
-  </script>
-</body>
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+        
+        <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+        
+        <a-gltf-model
+          rotation="0 0 0"
+          position="0 0 0.1"
+          scale="0.05 0.05 0.05"
+          src="#avatarModel1"
+          animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        </a-gltf-model>
+        
+       <!--<a-gltf-model
+          rotation="0 0 0"
+          position="-0.2 -0.2 0"
+          scale="0.15 0.15 0.15"
+          src="#Model1"
+          >
+        </a-gltf-model>-->
+        
+        <a-plane src="#whatsapp" position="-0.4 -0.4 0" height="0.1" width="0.1" href="https://whatsapp.com" class="clickable"></a-plane>
+        <a-plane src="#twitter" position="-0.2 -0.4 0" height="0.1" width="0.1" href="https://twitter.com" class="clickable"></a-plane>
+        <a-plane src="#linkedin" position="0 -0.4 0" height="0.1" width="0.1" href="https://linkedin.com" class="clickable"></a-plane>
+        <a-plane src="#instagram" position="0.2 -0.4 0" height="0.1" width="0.1" href="https://instagram.com" class="clickable"></a-plane>
+        <a-plane src="#facebook" position="0.4 -0.4 0" height="0.1" width="0.1" href="https://facebook.com" class="clickable"></a-plane>
+        
+      </a-entity>
+    </a-scene>
+  </body>
 </html>
