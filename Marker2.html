@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple AR Scene</title>
+  <title>AR Scene with 3D Model</title>
   <!-- Include A-Frame -->
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   <!-- Include AR.js -->
@@ -12,15 +12,20 @@
 <body style="margin: 0; overflow: hidden;">
   <!-- AR Scene -->
   <a-scene embedded arjs>
-    <!-- Adjust the box scale and position -->
-    <a-box 
-      position="0 0.2 0" 
-      scale="0.5 0.5 0.5" 
-      material="color: blue">
-    </a-box>
+    <!-- Assets -->
+    <a-assets>
+      <!-- Load a 3D Model (GLTF format) -->
+      <a-asset-item id="treeModel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSS3D.glb"></a-asset-item>
+    </a-assets>
 
-    <!-- Add a Marker (e.g., Hiro marker) -->
-    <a-marker-camera preset="hiro" fov="70"></a-marker-camera>
+    <!-- Use a Marker -->
+    <a-marker preset="hiro">
+      <!-- Add the 3D Model -->
+      <a-entity gltf-model="#treeModel" scale="0.5 0.5 0.5" position="0 0 0"></a-entity>
+    </a-marker>
+
+    <!-- Marker Camera -->
+    <a-marker-camera preset="hiro"></a-marker-camera>
   </a-scene>
 </body>
 </html>
