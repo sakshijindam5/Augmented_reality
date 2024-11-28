@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multiple Object Placement</title>
+<html>
+  <head>
+    <title>My AR App</title>
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
-</head>
-<body style="margin: 0; overflow: hidden;">
-  <!-- AR Scene -->
-  <a-scene embedded arjs="sourceType: webcam;">
+  </head>
+  <body>
+   <a-scene embedded arjs="sourceType: webcam;">
     <!-- Add a Plane for Interaction -->
     <a-entity 
       geometry="primitive: plane; height: 1; width: 1" 
@@ -25,9 +22,7 @@
       <a-cursor></a-cursor>
     </a-camera>
   </a-scene>
-
-  <!-- JavaScript for Interaction -->
-  <script>
+<script>
     const plane = document.querySelector('#plane');
 
     plane.addEventListener('click', (event) => {
@@ -47,5 +42,5 @@
       newObject.setAttribute('animation', 'property: rotation; to: 360 360 360; loop: true; dur: 5000');
     });
   </script>
-</body>
+  </body>
 </html>
