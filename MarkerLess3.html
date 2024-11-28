@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Object Placement</title>
+  <!-- Include A-Frame -->
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <!-- Include AR.js -->
+  <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.0.0/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <!-- AR Scene -->
+  <a-scene embedded arjs="sourceType: webcam;">
+    <!-- Add a Plane for Interaction -->
+    <a-entity 
+      geometry="primitive: plane; height: 1; width: 1" 
+      material="color: yellow; opacity: 0.2" 
+      position="0 0 -3" 
+      rotation="-90 0 0" 
+      id="plane" 
+      ar-hit-test>
+    </a-entity>
+
+    <!-- Camera with Cursor -->
+    <a-camera position="0 0 0" look-controls>
+      <a-cursor></a-cursor>
+    </a-camera>
+  </a-scene>
+
+  <!-- JavaScript for Interaction -->
+  <script>
+    const plane = document.querySelector('#plane');
+
+    plane.addEventListener('click', (event) => {
+      // Get click position
+      const clickPosition = event.detail.intersection.point;
+
+      // Create a new object (a cube in this example)
+      const newObject = document.createElement('a-box');
+      newObject.setAttribute('position', `${clickPosition.x} ${clickPosition.y + 0.5} ${clickPosition.z}`);
+      newObject.setAttribute('scale', '0.2 0.2 0.2');
+      newObject.setAttribute('material', 'color: red; opacity: 0.8');
+
+      // Add the object to the scene
+      document.querySelector('a-scene').appendChild(newObject);
+
+      // Optional: Add animation for a nice effect
+      newObject.setAttribute('animation', 'property: rotation; to: 360 360 360; loop: true; dur: 5000');
+    });
+  </script>
+</body>
+</html>
