@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Markerless AR</title>
+  <!-- Include A-Frame -->
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <!-- Include AR.js -->
+  <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.0.0/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <!-- AR Scene -->
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+    <!-- Assets -->
+    <a-assets>
+      <!-- Load a 3D Chair Model -->
+      <a-asset-item id="chairModel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/Ingenious_Fulffy.glb"></a-asset-item>
+    </a-assets>
+
+    <!-- Plane Detection -->
+    <a-entity 
+      geometry="primitive: plane; height: 0.5; width: 0.5" 
+      material="color: yellow; opacity: 0.3" 
+      position="0 0 -2" 
+      rotation="-90 0 0" 
+      ar-hit-test
+      class="clickable">
+    </a-entity>
+
+    <!-- Place the Chair on Click -->
+    <a-entity 
+      gltf-model="#chairModel" 
+      scale="0.5 0.5 0.5" 
+      position="0 -0.5 -2" 
+      visible="false" 
+      id="chair"></a-entity>
+
+    <!-- Camera -->
+    <a-camera position="0 0 0" look-controls>
+      <a-cursor></a-cursor>
+    </a-camera>
+  </a-scene>
+
+  <!-- JavaScript for Interaction -->
+  <script>
+    document.querySelector('.clickable').addEventListener('click', function () {
+      // Make the chair model visible
+      const chair = document.querySelector('#chair');
+      chair.setAttribute('visible', true);
+      chair.setAttribute('position', this.getAttribute('position')); // Place the chair at the clicked plane position
+    });
+  </script>
+</body>
+</html>
