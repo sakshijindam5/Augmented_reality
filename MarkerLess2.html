@@ -6,7 +6,7 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
   </head>
   <body>
-  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
     <!-- Assets -->
     <a-assets>
       <!-- Load a 3D Chair Model -->
@@ -36,8 +36,7 @@
       <a-cursor></a-cursor>
     </a-camera>
   </a-scene>
-
-      <script>
+ <script>
     document.querySelector('.clickable').addEventListener('click', function () {
       // Make the chair model visible
       const chair = document.querySelector('#chair');
@@ -47,7 +46,3 @@
   </script>
   </body>
 </html>
-
-
-
-
