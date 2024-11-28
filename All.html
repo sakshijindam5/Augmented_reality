@@ -3,69 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AR.js with NFT Marker</title>
-  <!-- Include AR.js -->
-  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@master/dist/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
-
-    .arjs-loader {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.8);
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .arjs-loader div {
-      text-align: center;
-      font-size: 1.5em;
-      color: white;
-    }
-  </style>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <title>A-Frame Example</title>
 </head>
 <body>
-  <!-- AR.js Loader -->
-  <div class="arjs-loader">
-    <div>Loading, please wait...</div>
-  </div>
+  <a-scene>
+    <!-- Sky -->
+    <a-sky color="#87CEEB"></a-sky>
 
-  <!-- AR.js Scene -->
-  <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-  >
-    <!-- NFT Marker -->
-    <a-nft
-      type="nft"
-      url="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSSCard.iset"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-    >
-      <!-- 3D Model -->
-      <a-entity
-        gltf-model="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSS3D.glb"
-        scale="0.5 0.5 0.5"
-        position="0 0 0"
-        rotation="0 180 0"
-      ></a-entity>
-    </a-nft>
+    <!-- Ground -->
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="green"></a-plane>
+
+    <!-- 3D Objects -->
+    <a-box position="0 1 -5" rotation="0 45 0" color="blue"></a-box>
+    <a-sphere position="-2 1.5 -4" radius="1" color="yellow"></a-sphere>
+
+    <!-- Lighting -->
+    <a-light type="directional" color="#fff" intensity="1" position="0 5 5"></a-light>
 
     <!-- Camera -->
-    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+    <a-camera position="0 1.6 0"></a-camera>
   </a-scene>
 </body>
 </html>
