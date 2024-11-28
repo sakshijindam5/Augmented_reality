@@ -35,35 +35,3 @@
 
 
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AR Scene with 3D Model</title>
-  <!-- Include A-Frame -->
-  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  <!-- Include AR.js -->
-  <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.0.0/aframe/build/aframe-ar.min.js"></script>
-</head>
-<body>
-  <!-- AR Scene -->
-  <a-scene embedded arjs>
-    <!-- Assets -->
-    <a-assets>
-      <!-- Load a 3D Model (GLTF format) -->
-      <a-asset-item id="treeModel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/NSS3D.glb"></a-asset-item>
-    </a-assets>
-
-    <!-- Use a Marker -->
-    <a-marker preset="hiro">
-      <!-- Add the 3D Model -->
-      <a-entity gltf-model="#treeModel" scale="0.5 0.5 0.5" position="0 0 0"></a-entity>
-    </a-marker>
-
-    <!-- Marker Camera -->
-<a-entity camera></a-entity>
-  </a-scene>
-</body>
-</html>
