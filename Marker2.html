@@ -9,7 +9,7 @@
   <!-- Include AR.js -->
   <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.0.0/aframe/build/aframe-ar.min.js"></script>
 </head>
-<body style="margin: 0; overflow: hidden;">
+<body>
   <!-- AR Scene -->
   <a-scene embedded arjs>
     <!-- Assets -->
@@ -25,7 +25,7 @@
     </a-marker>
 
     <!-- Marker Camera -->
-    <a-marker-camera preset="hiro"></a-marker-camera>
+<a-entity camera></a-entity>
   </a-scene>
 </body>
 </html>
