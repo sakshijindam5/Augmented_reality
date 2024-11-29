@@ -7,7 +7,7 @@
   </head>
   <body>
    <a-scene embedded arjs="sourceType: webcam;">
-    <!-- Add a Plane for Interaction -->
+  
     <a-entity 
       geometry="primitive: plane; height: 1; width: 1" 
       material="color: yellow; opacity: 0.2" 
@@ -17,7 +17,6 @@
       ar-hit-test>
     </a-entity>
 
-    <!-- Camera with Cursor -->
     <a-camera position="0 0 0" look-controls>
       <a-cursor></a-cursor>
     </a-camera>
@@ -26,19 +25,16 @@
     const plane = document.querySelector('#plane');
 
     plane.addEventListener('click', (event) => {
-      // Get click position
-      const clickPosition = event.detail.intersection.point;
 
-      // Create a new object (a cube in this example)
+      const clickPosition = event.detail.intersection.point;
+ 
       const newObject = document.createElement('a-box');
       newObject.setAttribute('position', `${clickPosition.x} ${clickPosition.y + 0.5} ${clickPosition.z}`);
       newObject.setAttribute('scale', '0.2 0.2 0.2');
       newObject.setAttribute('material', 'color: red; opacity: 0.8');
 
-      // Add the object to the scene
       document.querySelector('a-scene').appendChild(newObject);
 
-      // Optional: Add animation for a nice effect
       newObject.setAttribute('animation', 'property: rotation; to: 360 360 360; loop: true; dur: 5000');
     });
   </script>
