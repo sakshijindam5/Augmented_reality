@@ -7,42 +7,50 @@
   </head>
   <body>
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-    <!-- Assets -->
-    <a-assets>
-      <!-- Load a 3D Chair Model -->
-      <a-asset-item id="chairModel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/krabby_patty_burger.glb"></a-asset-item>
-    </a-assets>
+      <!-- Assets -->
+      <a-assets>
+        <!-- Load a 3D Chair Model -->
+        <a-asset-item id="chairModel" src="https://raw.githubusercontent.com/sakshijindam5/Augmented_reality/main/assets/krabby_patty_burger.glb"></a-asset-item>
+      </a-assets>
 
-    <!-- Plane Detection -->
-    <a-entity 
-      geometry="primitive: plane; height: 0.5; width: 0.5" 
-      material="color: yellow; opacity: 0.3" 
-      position="0 0 -2" 
-      rotation="-90 0 0" 
-      ar-hit-test
-      class="clickable">
-    </a-entity>
+      <!-- Plane Detection -->
+      <a-entity 
+        geometry="primitive: plane; height: 0.5; width: 0.5" 
+        material="color: yellow; opacity: 0.3" 
+        position="0 0 -2" 
+        rotation="-90 0 0" 
+        ar-hit-test
+        class="clickable">
+      </a-entity>
 
-    <!-- Place the Chair on Click -->
-    <a-entity 
-      gltf-model="#chairModel" 
-      scale="0.5 0.5 0.5" 
-      position="0 -0.5 -2" 
-      visible="false" 
-      id="chair"></a-entity>
+      <!-- Chair Model -->
+      <a-entity 
+        gltf-model="#chairModel" 
+        scale="0.5 0.5 0.5" 
+        position="0 -0.5 -2" 
+        visible="false" 
+        id="chair"></a-entity>
 
-    <!-- Camera -->
-    <a-camera position="0 0 0" look-controls>
-      <a-cursor></a-cursor>
-    </a-camera>
-  </a-scene>
- <script>
-    document.querySelector('.clickable').addEventListener('click', function () {
-      // Make the chair model visible
-      const chair = document.querySelector('#chair');
-      chair.setAttribute('visible', true);
-      chair.setAttribute('position', this.getAttribute('position')); // Place the chair at the clicked plane position
-    });
-  </script>
+      <!-- Camera -->
+      <a-camera position="0 0 0" look-controls>
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+
+    <script>
+      // Add an event listener for the plane click
+      document.querySelector('.clickable').addEventListener('click', function () {
+        const chair = document.querySelector('#chair');
+        
+        // Get the position of the clicked plane
+        const planePosition = this.getAttribute('position');
+        
+        // Update the chair's position to the plane's position
+        chair.setAttribute('position', planePosition);
+        
+        // Make the chair visible
+        chair.setAttribute('visible', true);
+      });
+    </script>
   </body>
 </html>
