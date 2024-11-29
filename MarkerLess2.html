@@ -21,12 +21,9 @@
         class="clickable">
       </a-entity>
 
-      <a-entity 
-        gltf-model="#chairModel" 
-        scale="0.5 0.5 0.5" 
-        position="0 -0.5 -2" 
-        visible="false" 
-        id="chair"></a-entity>
+      <a-entity>
+        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.05 0.05 0.05" src="#chairModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+      </a-entity>
 
       <a-camera position="0 0 0" look-controls>
         <a-cursor></a-cursor>
