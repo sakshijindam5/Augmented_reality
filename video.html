@@ -1,24 +1,35 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  <title>A-Frame Example</title>
-</head>
-<body>
-  <a-scene>
+<html>
+  <head>
+    <title>My AR App</title>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      <a-assets>
+        <video id="video" src="https://github.com/sakshijindam5/Augmented_reality/blob/main/assets/videoplayback-unscreen.mp4" loop="true" autoplay="true" webkit-playsinline playsinline muted></video>
+      </a-assets>
+      
+      <a-marker type="pattern" url="assets/pattern-download.patt">
+        <a-video 
+          src="assets/videoplayback-unscreen.mp4" 
+          position="0 0 0"   
+          width="1"          
+          height="0.75"      
+          rotation="0 180 0"    
+          autoplay="true" 
+          loop="true" 
+          muted="true">
+        </a-video>
+      </a-marker>
 
-    <a-sky color="#87CEEB"></a-sky>
+      <a-marker preset="hiro">
+          <a-video src="assets/videoplayback-unscreen.mp4" width="4" height="2.25" position="0 0 0" autoplay="true" loop="true" muted="true"></a-video>
+      </a-marker>
 
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="green"></a-plane>
-
-    <a-box position="0 1 -5" rotation="0 45 0" color="blue"></a-box>
-    <a-sphere position="-2 1.5 -4" radius="1" color="yellow"></a-sphere>
-
-    <a-light type="directional" color="#fff" intensity="1" position="0 5 5"></a-light>
-
-    <a-camera position="0 1.6 0"></a-camera>
-  </a-scene>
-</body>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>
