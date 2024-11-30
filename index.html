@@ -11,24 +11,22 @@
         <video id="video" src="https://github.com/sakshijindam5/Augmented_reality/blob/main/assets/videoplayback-unscreen.mp4" loop="true" autoplay="true" webkit-playsinline playsinline muted></video>
       </a-assets>
       
-      
-  <a-marker type="pattern" url="assets/pattern-download.patt">
-  <a-video 
-    src="assets/videoplayback-unscreen.mp4" 
-    position="0 0 0"   
-    width="1"          
-    height="0.75"      
-    rotation="0 180 0"    
-    autoplay="true" 
-    loop="true" 
-    muted="true">
-  </a-video>
-</a-marker>
+      <a-marker type="pattern" url="assets/pattern-download.patt">
+        <a-video 
+          src="assets/videoplayback-unscreen.mp4" 
+          position="0 0 0"   
+          width="1"          
+          height="0.75"      
+          rotation="0 180 0"    
+          autoplay="true" 
+          loop="true" 
+          muted="true">
+        </a-video>
+      </a-marker>
 
-
-           <a-marker preset="hiro">
-            <a-video src="assets/videoplayback-unscreen.mp4" width="4" height="2.25" position="0 0 0" autoplay="true" loop="true" muted="true"></a-video>
-        </a-marker>
+      <a-marker preset="hiro">
+          <a-video src="assets/videoplayback-unscreen.mp4" width="4" height="2.25" position="0 0 0" autoplay="true" loop="true" muted="true"></a-video>
+      </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
