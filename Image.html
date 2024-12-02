@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Augmented Reality Example</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
@@ -43,26 +43,17 @@
           animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-gltf-model>
 
-        <a-plane src="#whatsapp" position="-0.4 -0.4 0" height="0.1" width="0.1" class="social-icon" data-url="https://whatsapp.com"></a-plane>
-        <a-plane src="#twitter" position="-0.2 -0.4 0" height="0.1" width="0.1" class="social-icon" data-url="https://twitter.com"></a-plane>
-        <a-plane src="#linkedin" position="0 -0.4 0" height="0.1" width="0.1" class="social-icon" data-url="https://linkedin.com"></a-plane>
-        <a-plane src="#instagram" position="0.2 -0.4 0" height="0.1" width="0.1" class="social-icon" data-url="https://instagram.com"></a-plane>
-        <a-plane src="#facebook" position="0.4 -0.4 0" height="0.1" width="0.1" class="social-icon" data-url="https://facebook.com"></a-plane>
+        <a-plane src="#whatsapp" position="-0.4 -0.4 0" height="0.1" width="0.1" href="https://whatsapp.com" class="clickable"></a-plane>
+        <a-plane src="#twitter" position="-0.2 -0.4 0" height="0.1" width="0.1" href="https://twitter.com" class="clickable"></a-plane>
+        <a-plane src="#linkedin" position="0 -0.4 0" height="0.1" width="0.1" href="https://linkedin.com" class="clickable"></a-plane>
+        <a-plane src="#instagram" position="0.2 -0.4 0" height="0.1" width="0.1" href="https://instagram.com" class="clickable"></a-plane>
+        <a-plane src="#facebook" position="0.4 -0.4 0" height="0.1" width="0.1" href="https://facebook.com" class="clickable"></a-plane>
       </a-entity>
+
+      <!--<a-sky color="#ECECEC"></a-sky>-->
     </a-scene>
 
     <script>
-      // Add a click listener for social media icons
-      document.querySelectorAll('.social-icon').forEach((icon) => {
-        icon.addEventListener('click', function () {
-          const url = this.getAttribute('data-url');
-          if (url) {
-            window.open(url, '_blank'); // Open the URL in a new tab
-          }
-        });
-      });
-
-      // Debugging and marker events
       AFRAME.registerComponent("debug-log", {
         init: function () {
           console.log("AR Component Initialized:", this.el);
